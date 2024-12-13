@@ -88,3 +88,6 @@ else if(departmentPrompt === "sales") {
 else if(departmentPrompt === "customer-service") {
     console.log("Je koos " + departmentPrompt + ". " + departments["customer-service"].description);
 }
+else {
+    console.error("Ongeldige keuze. Probeer het opnieuw door de pagina te verversen.")
+}
