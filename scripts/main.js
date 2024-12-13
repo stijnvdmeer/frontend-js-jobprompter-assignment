@@ -79,3 +79,12 @@ console.log("Sales is een uitdagende afdeling om te werken als verkoopmanager. "
 
 const departmentPrompt = prompt("Over welke afdeling wil je meer informatie? Kies uit: [marketing / sales / customer-service]");
 console.log(departmentPrompt);
+if(departmentPrompt === "marketing") {
+    console.log("Je koos " + departmentPrompt + ". " + departments.marketing.description);
+}
+else if(departmentPrompt === "sales") {
+    console.log("Je koos " + departmentPrompt + ". " + departments.sales.description);
+}
+else if(departmentPrompt === "customer-service") {
+    console.log("Je koos " + departmentPrompt + ". " + departments["customer-service"].description);
+}
