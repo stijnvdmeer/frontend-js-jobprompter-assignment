@@ -112,5 +112,6 @@ switch (jobPrompt) {
         console.log("Je koos " + departments.marketing.jobs[3].title + ". Een uitdagende rol! " + departments.marketing.jobs[3].description);
     break;
     default:
+        console.error("Ongeldige keuze. Probeer het opnieuw door de pagina te verversen.");
     break;
 }
