@@ -97,3 +97,20 @@ const jobPrompt = prompt("Je koos marketing. Over welke functie wil je meer wete
     "1: " + departments.marketing.jobs[1].title + " ,\n" +
     "2: " + departments.marketing.jobs[2].title + " ,\n" +
     "3: " + departments.marketing.jobs[3].title );
+
+switch (jobPrompt) {
+    case "0" :
+        console.log("Je koos " + departments.marketing.jobs[0].title + ". Een uitdagende rol! " + departments.marketing.jobs[0].description);
+    break;
+    case "1" :
+        console.log("Je koos " + departments.marketing.jobs[1].title + ". Een uitdagende rol! " + departments.marketing.jobs[1].description);
+    break;
+    case "2" :
+        console.log("Je koos " + departments.marketing.jobs[2].title + ". Een uitdagende rol! " + departments.marketing.jobs[2].description);
+    break;
+    case "3" :
+        console.log("Je koos " + departments.marketing.jobs[3].title + ". Een uitdagende rol! " + departments.marketing.jobs[3].description);
+    break;
+    default:
+    break;
+}
