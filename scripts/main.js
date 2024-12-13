@@ -77,17 +77,23 @@ console.log("Marketing is een leuke afdeling om te werken. " + departments.marke
 console.log("De afdeling Sales heeft " + departments["customer-service"].numberOfEmployees + " medewerkers.");
 console.log("Sales is een uitdagende afdeling om te werken als verkoopmanager. " + departments.sales.jobs[1].description);
 
-const departmentPrompt = prompt("Over welke afdeling wil je meer informatie? Kies uit: [marketing / sales / customer-service]");
-console.log(departmentPrompt);
-if(departmentPrompt === "marketing") {
-    console.log("Je koos " + departmentPrompt + ". " + departments.marketing.description);
-}
-else if(departmentPrompt === "sales") {
-    console.log("Je koos " + departmentPrompt + ". " + departments.sales.description);
-}
-else if(departmentPrompt === "customer-service") {
-    console.log("Je koos " + departmentPrompt + ". " + departments["customer-service"].description);
-}
-else {
-    console.error("Ongeldige keuze. Probeer het opnieuw door de pagina te verversen.")
-}
+// const departmentPrompt = prompt("Over welke afdeling wil je meer informatie? Kies uit: [marketing / sales / customer-service]");
+// console.log(departmentPrompt);
+// if(departmentPrompt === "marketing") {
+//     console.log("Je koos " + departmentPrompt + ". " + departments.marketing.description);
+// }
+// else if(departmentPrompt === "sales") {
+//     console.log("Je koos " + departmentPrompt + ". " + departments.sales.description);
+// }
+// else if(departmentPrompt === "customer-service") {
+//     console.log("Je koos " + departmentPrompt + ". " + departments["customer-service"].description);
+// }
+// else {
+//     console.error("Ongeldige keuze. Probeer het opnieuw door de pagina te verversen.")
+// }
+
+const jobPrompt = prompt("Je koos marketing. Over welke functie wil je meer weten? Voer een getal tussen 0 en 3 in.\n" +
+    "0: " + departments.marketing.jobs[0].title + " ,\n" +
+    "1: " + departments.marketing.jobs[1].title + " ,\n" +
+    "2: " + departments.marketing.jobs[2].title + " ,\n" +
+    "3: " + departments.marketing.jobs[3].title );
