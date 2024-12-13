@@ -74,3 +74,4 @@ const departments = {
 // console.log(departments);
 console.log("De afdeling Sales heeft " + departments.sales.numberOfEmployees + " medewerkers.");
 console.log("Marketing is een leuke afdeling om te werken. " + departments.marketing.description);
+console.log("De afdeling Sales heeft " + departments["customer-service"].numberOfEmployees + " medewerkers.")
