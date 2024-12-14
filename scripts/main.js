@@ -72,20 +72,20 @@ const departments = {
 }
 
 // console.log(departments);
-console.log("De afdeling Sales heeft " + departments.sales.numberOfEmployees + " medewerkers.");
-console.log("Marketing is een leuke afdeling om te werken. " + departments.marketing.description);
-console.log("De afdeling Sales heeft " + departments["customer-service"].numberOfEmployees + " medewerkers.");
-console.log("Sales is een uitdagende afdeling om te werken als verkoopmanager. " + departments.sales.jobs[1].description);
+// console.log("De afdeling Sales heeft " + departments.sales.numberOfEmployees + " medewerkers.");
+// console.log("Marketing is een leuke afdeling om te werken. " + departments.marketing.description);
+// console.log("De afdeling Sales heeft " + departments["customer-service"].numberOfEmployees + " medewerkers.");
+// console.log("Sales is een uitdagende afdeling om te werken als verkoopmanager. " + departments.sales.jobs[1].description);
 
 const departmentPrompt = prompt("Over welke afdeling wil je meer informatie? Kies uit: [marketing / sales / customer-service]");
-console.log(departmentPrompt);
+// console.log(departmentPrompt);
 
 
 if(departmentPrompt === "marketing" || departmentPrompt === "sales" || departmentPrompt === "customer-service") {
-    console.log(departmentPrompt + " is een leuke afdeling om te werken. Er werken op dit moment " + departments[departmentPrompt].numberOfEmployees + " medewerkers.");
+    document.getElementById("department-description").innerHTML = departments[departmentPrompt].description;
 }
 else {
-    console.error("Ongeldige keuze. Probeer het opnieuw door de pagina te verversen.");
+    document.getElementById("error-message").innerHTML = "Ongeldige keuze. Probeer het opnieuw door de pagina te verversen.";
 }
 const jobPrompt = prompt("Je koos" + departmentPrompt + ". Over welke functie wil je meer weten? Voer een getal tussen 0 en 3 in.\n" +
     "0: " + departments[departmentPrompt].jobs[0].title + " ,\n" +
@@ -94,10 +94,11 @@ const jobPrompt = prompt("Je koos" + departmentPrompt + ". Over welke functie wi
     "3: " + departments[departmentPrompt].jobs[3].title );
 
 if( jobPrompt === "0" || jobPrompt === "1" || jobPrompt === "2" || jobPrompt === "3") {
-    console.log("Je koos " + departments[departmentPrompt].jobs[jobPrompt].title + ". een uitdagende rol! " + departments[departmentPrompt].jobs[jobPrompt].description);
+    document.getElementById("role-title").innerHTML = departments[departmentPrompt].jobs[jobPrompt].title;
+    document.getElementById("role-description").innerHTML = departments[departmentPrompt].description;
 }
 else {
-    console.error("Ongeldige keuze. Probeer het opnieuw door de pagina te verversen.");
+    document.getElementById("error-message").innerHTML = "Ongeldige keuze. Probeer het opnieuw door de pagina te verversen.";
 }
 
 // Je kan hier een heel beslissings structuur maken door gebruik van ifelse of een switch, maar niet alleen is deze manier korter, het is ook dynamisch
