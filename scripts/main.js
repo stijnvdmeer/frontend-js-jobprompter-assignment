@@ -79,20 +79,16 @@ console.log("Sales is een uitdagende afdeling om te werken als verkoopmanager. "
 
 const departmentPrompt = prompt("Over welke afdeling wil je meer informatie? Kies uit: [marketing / sales / customer-service]");
 console.log(departmentPrompt);
-if(departmentPrompt === "marketing") {
-    console.log(departmentPrompt + " is een leuke afdeling om te werken. Er werken op dit moment " + departments.marketing.numberOfEmployees + " medewerkers.");
-}
-else if(departmentPrompt === "sales") {
-    console.log(departmentPrompt + " is een leuke afdeling om te werken. Er werken op dit moment " + departments.sales.numberOfEmployees + " medewerkers.");
-}
-else if(departmentPrompt === "customer-service") {
-    console.log(departmentPrompt + " is een leuke afdeling om te werken. Er werken op dit moment " + departments["customer-service"].numberOfEmployees + " medewerkers.");
+
+
+if(departmentPrompt === "marketing" || departmentPrompt === "sales" || departmentPrompt === "customer-service") {
+    console.log(departmentPrompt + " is een leuke afdeling om te werken. Er werken op dit moment " + departments[departmentPrompt].numberOfEmployees + " medewerkers.");
 }
 else {
-    console.error("Ongeldige keuze. Probeer het opnieuw door de pagina te verversen.")
+    console.error("Ongeldige keuze. Probeer het opnieuw door de pagina te verversen.");
 }
 
-// const jobPrompt = prompt("Je koos marketing. Over welke functie wil je meer weten? Voer een getal tussen 0 en 3 in.\n" +
+// const jobPrompt = prompt("Je koos" + departmentPrompt + ". Over welke functie wil je meer weten? Voer een getal tussen 0 en 3 in.\n" +
 //     "0: " + departments.marketing.jobs[0].title + " ,\n" +
 //     "1: " + departments.marketing.jobs[1].title + " ,\n" +
 //     "2: " + departments.marketing.jobs[2].title + " ,\n" +
